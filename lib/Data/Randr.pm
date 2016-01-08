@@ -5,7 +5,7 @@ use Carp qw/croak/;
 use Exporter 'import';
 our @EXPORT_OK = qw/randr/;
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 sub new {
     my ($class, %args) = @_;
@@ -110,7 +110,7 @@ Like below, C<$res> is 8.0000 - 11.9999.
 
 =begin html
 
-<a href="http://travis-ci.org/bayashi/Data-Randr"><img src="https://secure.travis-ci.org/bayashi/Data-Randr.png?_t=1452228809"/></a> <a href="https://coveralls.io/r/bayashi/Data-Randr"><img src="https://coveralls.io/repos/bayashi/Data-Randr/badge.png?_t=1452228809&branch=master"/></a>
+<a href="http://travis-ci.org/bayashi/Data-Randr"><img src="https://secure.travis-ci.org/bayashi/Data-Randr.png?_t=1452229187"/></a> <a href="https://coveralls.io/r/bayashi/Data-Randr"><img src="https://coveralls.io/repos/bayashi/Data-Randr/badge.png?_t=1452229187&branch=master"/></a>
 
 =end html
 
