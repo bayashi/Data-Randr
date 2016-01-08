@@ -54,7 +54,7 @@ __END__
 
 =head1 NAME
 
-Data::Randr - splash number
+Data::Randr - numeral randomizer for a cache expires time
 
 
 =head1 SYNOPSIS
@@ -75,7 +75,7 @@ or OOP style
 
 =head1 DESCRIPTION
 
-Data::Randr gives splashing number for a cache expires time to avoid the thundering herd problem.
+Data::Randr gives random number for a cache expires time to avoid the thundering herd problem.
 
 =head1 METHOD
 
@@ -87,7 +87,7 @@ constractor
 
 =head4 rate : int // 10
 
-splashing rate(1 - 100)
+randomize rate(1 - 100)
 
 =head4 digit : int // 0
 
@@ -95,7 +95,15 @@ decimal number
 
 =head2 randr($number[, $rate, $digit])
 
-response splashed number
+response randomized number
+
+Like below, C<$res> is 8.0000 - 11.9999.
+
+    my $res = randr(
+        10, # base number
+        20, # randomize rate for base number
+        4,  # decimal number
+    );
 
 
 =head1 REPOSITORY
