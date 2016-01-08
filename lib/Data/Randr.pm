@@ -34,7 +34,7 @@ sub randr {
         ($base, $rate, $digit) = @_;
     }
 
-    croak "required rate(0 - 100) :".($rate || '') if !$rate || $rate < 0 || $rate > 100;
+    $rate ||= 10;
 
     my $splash = int( $base * ($rate/100) );
     my $result = $base - $splash + rand($splash*2+1*($digit ? 0 : 1));
@@ -59,18 +59,23 @@ Data::Randr - splash number
 
 =head1 SYNOPSIS
 
+    use Data::Randr qw/randr/;
+
+    randr(10);        # 9 - 11
+    randr(10, 20);    # 8 - 12
+    randr(10, 20, 4); # 8.0000 - 11.9999 down to 4 decimal places, ex. 8.4321
+
+or OOP style
+
     use Data::Randr;
 
-    randr(10); # 9 - 11
-
-    randr(10, 20); # 8 - 12
-
-    randr(10, 20, 4); # 8 - 12.9999 down to 4 decimal places, ex. 8.6389
+    $rdr = Data::Randr->new(rate => 20, digit => 2);
+    $rdr->randr(10); # 8.00 - 11.99
 
 
 =head1 DESCRIPTION
 
-Data::Randr gives splashing number for a cache expires.
+Data::Randr gives splashing number for a cache expires time to avoid the thundering herd problem.
 
 =head1 METHOD
 
@@ -80,11 +85,11 @@ constractor
 
 =head3 constract options
 
-=head4 rate : int // 10 (require)
+=head4 rate : int // 10
 
 splashing rate(1 - 100)
 
-=head4 digit : int // 0 (optional)
+=head4 digit : int // 0
 
 decimal number
 

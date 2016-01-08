@@ -18,12 +18,12 @@ my $COUNT = 10000;
     }
 
     for my $number (1..$COUNT) {
-        my $res = randr(10, 10);
+        my $res = randr(10);
         fail("randr(10, 10): $res") if $res < 9 || $res > 11;
     }
 
     for my $number (1..$COUNT) {
-        my $res = randr(100, 10);
+        my $res = randr(100);
         fail("randr(100, 10): $res") if $res < 90 || $res > 110;
     }
 
