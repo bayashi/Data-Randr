@@ -1,5 +1,5 @@
 {
-   "abstract" : "splash number",
+   "abstract" : "numeral randomizer for a cache expires time",
    "author" : [
       "Dai Okabayashi <bayashi@cpan.org>"
    ],
@@ -44,7 +44,7 @@
    "provides" : {
       "Data::Randr" : {
          "file" : "lib/Data/Randr.pm",
-         "version" : "0.01"
+         "version" : "0.02"
       }
    },
    "release_status" : "stable",
@@ -63,6 +63,6 @@
          "web" : "http://webchat.freenode.net/?channels=%23bayadev"
       }
    },
-   "version" : "0.01",
+   "version" : "0.02",
    "x_serialization_backend" : "JSON::PP version 2.27300"
 }
