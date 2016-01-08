@@ -81,9 +81,9 @@ Data::Randr gives random number for a cache expires time to avoid the thundering
 
 =head2 new(%args)
 
-constractor
+constructor
 
-=head3 constract options
+=head3 construct options
 
 =head4 rate : int // 10
 
