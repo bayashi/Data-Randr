@@ -69,7 +69,7 @@ or OOP style
 
     use Data::Randr;
 
-    $rdr = Data::Randr->new(rate => 20, digit => 2);
+    my $rdr = Data::Randr->new(rate => 20, digit => 2);
     $rdr->randr(10); # 8.00 - 11.99
 
 
